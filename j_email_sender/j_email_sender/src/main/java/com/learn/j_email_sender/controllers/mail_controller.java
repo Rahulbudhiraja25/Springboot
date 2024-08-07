@@ -12,6 +12,7 @@ public class mail_controller {
     private email_service Email_Service;
 @PostMapping("/send")
     public String sendEmail(@RequestParam String to , @RequestParam String subject ,@RequestParam String text){
+
         try {
             Email_Service.sendSimpleEmail(to, subject, text);
         return "Email sent sucessfully";
