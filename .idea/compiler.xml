@@ -10,6 +10,7 @@
         <module name="sb_gamerunner_first" />
         <module name="SpringConfigBeanLearn" />
         <module name="projresume" />
+        <module name="socialLogin" />
       </profile>
     </annotationProcessing>
   </component>
@@ -19,6 +20,7 @@
       <module name="j_email_sender" options="-parameters" />
       <module name="projresume" options="-parameters" />
       <module name="sb_gamerunner_first" options="-parameters" />
+      <module name="socialLogin" options="-parameters" />
     </option>
   </component>
 </project>
