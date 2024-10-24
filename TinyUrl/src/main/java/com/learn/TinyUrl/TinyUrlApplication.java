@@ -11,3 +11,5 @@ public class TinyUrlApplication {
 	}
 
 }
+
+//Use username sa and password null to connect to h2 database install db and use default
