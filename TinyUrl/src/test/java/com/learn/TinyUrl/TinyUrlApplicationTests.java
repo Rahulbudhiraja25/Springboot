@@ -1,10 +1,10 @@
-package com.learn.DatraFetch;
+package com.learn.TinyUrl;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DatraFetchApplicationTests {
+class TinyUrlApplicationTests {
 
 	@Test
 	void contextLoads() {
