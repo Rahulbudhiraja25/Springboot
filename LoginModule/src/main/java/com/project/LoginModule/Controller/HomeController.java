@@ -12,4 +12,14 @@ public class HomeController {
     public String home() {
         return "redirect:/login.html";  // Serve login.html from /static
     }
+
+    @GetMapping("/signup")
+    public String signup(){
+        return "redirect:/signup.html";
+    }
+    @GetMapping("/homepage")
+    public String homepage(){
+        return "redirect:/homepage.html";
+
+    }
 }

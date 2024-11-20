@@ -2,9 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GyanBox</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-$END$
+
+<!-- Header -->
+<header id="header">
+  <h1>GyanBox Home</h1>
+  <nav>
+    <a href="#home" id="nav-home" class="active">Home</a>
+    <a href="#about" id="nav-about">About Us</a>
+    <a href="#content" id="nav-content">Community</a>
+    <a href="#testimonials" id="nav-testimonials">Testimonials</a>
+    <a href="#newsletter" id="nav-newsletter">Newsletter</a>
+    <a href="#contact" id="nav-contact">Contact Us</a>
+  </nav>
+</header>
+
+<!-- Sections -->
+<section id="home" class="home-section">
+  <div class="home-content">
+    <h2>Welcome to GyanBox</h2>
+    <p>GyanBox is an empowering community for BCA students. Join our community to enhance your skills and land your dream tech job!</p>
+    <p>Join us on Discord for real-time collaboration, doubt solving, and discussions!</p>
+    <img src="images/GyanBox_illus.jpg" alt="GyanBox Community Illustration" height="300" width="200">
+    <button class="cta-button" onclick="window.location.href='https://discord.com/invite/yourdiscordlink'">Join Discord Now</button>
+  </div>
+</section>
+
+<section id="about" class="about-section">
+  <h2>About Us</h2>
+  <p>Founded by <strong>Rahul Budhiraja</strong>, Associate Software Engineer, GyanBox is a community dedicated to helping BCA students prepare for the tech industry with mentorship, resources, and networking opportunities.</p>
+  <div class="carousel">
+    <img src="images/rahul-photo1.jpg" alt="Rahul Budhiraja"height="250">
+<!--    <img src="images/rahul-photo2.jpg" alt="Rahul Budhiraja" height="30">-->
+  </div>
+</section>
+
+<section id="content" class="content-section">
+  <h2>Empower Your Future</h2>
+  <p>We are here to guide you towards a successful career. With GyanBox, you will have access to:</p>
+  <ul>
+    <li>Exclusive resources and tutorials</li>
+    <li>Career advice and mentorship</li>
+    <li>Industry-related discussions and seminars</li>
+    <li>Live coding sessions and workshops</li>
+  </ul>
+  <p>Let's connect and prepare for high-paying jobs together!</p>
+  <img src="images/community-growth.jpg" alt="Community Growth">
+</section>
+
+<section id="testimonials" class="testimonials-section">
+  <h2>Success Stories</h2>
+  <div class="testimonial">
+    <p>"GyanBox has been instrumental in helping me land my internship! The community is supportive, and the resources are top-notch."</p>
+    <p>- <strong>Student A</strong></p>
+  </div>
+  <div class="testimonial">
+    <p>"I was struggling with certain coding concepts, but GyanBox's doubt channels helped me clarify everything quickly!"</p>
+    <p>- <strong>Student B</strong></p>
+  </div>
+</section>
+
+<section id="newsletter" class="newsletter-section">
+  <h2>Stay Updated!</h2>
+  <p>Sign up for our newsletter to receive updates on events, resources, and more!</p>
+  <form id="newsletter-form">
+    <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+<section id="contact" class="contact-section">
+  <h2>Contact Us</h2>
+  <p>We'd love to hear from you! If you have any questions or feedback, feel free to get in touch with us.</p>
+  <form id="contact-form">
+    <input type="text" id="contact-name" placeholder="Your Name" required>
+    <input type="email" id="contact-email" placeholder="Your Email" required>
+    <textarea id="contact-message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2024 GyanBox. All rights reserved.</p>
+</footer>
+
+<script src="scripts.js"></script>
 </body>
 </html>
