@@ -2,13 +2,10 @@
 
 //    package com.project.ems.service;
 
-    import com.fasterxml.jackson.databind.ObjectMapper;
-    import com.project.ems.EventRepository;
+    import com.project.ems.Repository.EventRepository;
     import com.project.ems.model.Event;
-    import com.project.ems.model.EventResponseWrapper;
     import org.springframework.beans.factory.annotation.Autowired;
     import org.springframework.stereotype.Service;
-    import org.springframework.web.bind.annotation.GetMapping;
 
     import java.util.List;
 
@@ -16,7 +13,7 @@
     public class eventService {
 
         @Autowired
-        private EventRepository eventRepository; // No 'static' here
+        private EventRepository eventRepository;
 
         // Create Event
         public String createEvent(Event event) {

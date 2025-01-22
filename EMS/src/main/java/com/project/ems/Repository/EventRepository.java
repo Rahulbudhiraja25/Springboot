@@ -1,4 +1,4 @@
-package com.project.ems;
+package com.project.ems.Repository;
 
 import com.project.ems.model.Event;
 import org.springframework.data.jpa.repository.JpaRepository;
