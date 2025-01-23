@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.awt.image.BufferedImage;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,6 +19,8 @@ public class AttendeeController {
 
     @Autowired
     public AtendeeRepository attendeeRepository;
+    @Autowired
+    private com.project.ems.service.emailService emailService;
 //    private Long id;
 
     @GetMapping
@@ -43,8 +46,12 @@ public class AttendeeController {
                 String sanitizedAttendeeName = attendee.getFirstName().replaceAll("[^a-zA-Z0-9]", "_");
                 String fileName = "QR_" + sanitizedAttendeeName + "_" + id + ".png";
 
+                BufferedImage img;
+
                 // Generate QR code and save it in the "qrCodes" folder
-                QRCodeGenerator.generateQRCodeImage(qrText, 200, 200, attendee.getFirstName(), id);
+                img=QRCodeGenerator.generateQRCodeImage(qrText, 200, 200, attendee.getFirstName(), id);
+
+                emailService.sendEmail(attendee.getEmail(),"Qr code for attendee "+attendee.getFirstName(),"QR Code for attendee "+"QR"+"_"+attendee.getFirstName()+"_"+attendee.getId()+".png",img);
 
                 return ResponseEntity.ok("QR code generated successfully for attendee ID " + id);
             } catch (Exception e) {

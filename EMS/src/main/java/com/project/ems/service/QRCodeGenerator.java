@@ -3,6 +3,7 @@ import com.google.zxing.BarcodeFormat;
 import com.google.zxing.WriterException;
 import com.google.zxing.qrcode.QRCodeWriter;
 import com.google.zxing.common.BitMatrix;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -11,7 +12,7 @@ import java.io.IOException;
 
 public class QRCodeGenerator {
 
-    public static void generateQRCodeImage(String text, int width, int height, String attendeeName, long attendeeId) throws WriterException, IOException {
+    public static BufferedImage generateQRCodeImage(String text, int width, int height, String attendeeName, long attendeeId) throws WriterException, IOException {
 
         String folderName = "qrCodes";
         File folder = new File(folderName);
@@ -43,5 +44,10 @@ public class QRCodeGenerator {
         File file = new File(filePath);
         ImageIO.write(bufferedImage, "PNG", file);
         System.out.println("QR Code saved at: " + file.getAbsolutePath());
+
+
+//        test
+        return bufferedImage;
+
     }
 }
