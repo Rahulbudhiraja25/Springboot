@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Template</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .email-container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        p {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #eaeaea;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #333;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+<div class="email-container">
+    <h1 th:text="'Hello, ' + ${name} + '!'">Hello, User!</h1>
+    <p>Thank you for using our service.</p>
+    <p>Here are the details:</p>
+    <ul>
+        <li th:text="'Item 1: ' + ${item1}">Item 1: Sample Item 1</li>
+        <li th:text="'Item 2: ' + ${item2}">Item 2: Sample Item 2</li>
+    </ul>
+    <p class="footer">Best regards,<br>Rahul @CopyrightTemplate</p>
+</div>
+</body>
+</html>
