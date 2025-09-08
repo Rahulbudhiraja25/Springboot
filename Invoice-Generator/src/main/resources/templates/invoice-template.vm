@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Professional Invoice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #333333;
+            line-height: 1.5;
+            background-color: #ffffff;
+        }
+        .invoice-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eeeeee;
+            padding-bottom: 20px;
+        }
+        .company-info {
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f8f8f8;
+            font-weight: bold;
+        }
+        .total-row {
+            font-weight: bold;
+            background-color: #f8f8f8;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eeeeee;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="invoice-container">
+        <div class="header">
+            <h1 style="margin: 0 0 5px 0;">${project}</h1>
+            <p style="margin: 0; font-size: 18px;">INVOICE</p>
+        </div>
+
+        <div class="company-info">
+            <p style="margin: 5px 0;"><strong>GSTIN:</strong> 22ABCDE1234F1Z5</p>
+            <p style="margin: 5px 0;"><strong>PAN:</strong> ABCDE1234F</p>
+            <p style="margin: 5px 0;"><strong>Address:</strong> 123 Business Street, City - 100001</p>
+            <p style="margin: 5px 0;"><strong>Invoice Date:</strong> 01-Jan-2023</p>
+            <p style="margin: 5px 0;"><strong>Invoice No:</strong> INV-${project}-001</p>
+        </div>
+
+        <table>
+            <tr>
+                <th>Employee ID</th>
+                <th>Hours</th>
+                <th>Rate (₹)</th>
+                <th>Amount (₹)</th>
+            </tr>
+            ${body}
+        </table>
+
+        <div class="footer">
+            <p><strong>Bank Details:</strong></p>
+            <p style="margin: 5px 0;">Bank Name: Example Bank</p>
+            <p style="margin: 5px 0;">Account No: 1234567890</p>
+            <p style="margin: 5px 0;">IFSC Code: ABCD0123456</p>
+            <p style="margin: 20px 0 0 0;"><strong>Terms:</strong> Payment due within 15 days</p>
+        </div>
+    </div>
+</body>
+</html>
